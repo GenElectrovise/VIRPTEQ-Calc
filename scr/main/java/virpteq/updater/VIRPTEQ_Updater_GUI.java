@@ -17,6 +17,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JScrollBar;
 
 public class VIRPTEQ_Updater_GUI {
 
@@ -34,6 +36,7 @@ public class VIRPTEQ_Updater_GUI {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					testForSaveLocation();
 					VIRPTEQ_Updater_GUI window = new VIRPTEQ_Updater_GUI();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
@@ -55,23 +58,14 @@ public class VIRPTEQ_Updater_GUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 660, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		bgpanel.setBorder(new TitledBorder(null, "VIRPTEQ Calculator Updater", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		bgpanel.setBounds(10, 11, 414, 239);
+		bgpanel.setBounds(10, 11, 624, 239);
 		frame.getContentPane().add(bgpanel);
 		bgpanel.setLayout(null);
-		txtpnLog.setWrapStyleWord(true);
-		
-		txtpnLog.setToolTipText("Log of actions");
-		txtpnLog.setFont(new Font("Tahoma", Font.BOLD, 9));
-		txtpnLog.setEditable(false);
-		txtpnLog.setBounds(10, 23, 207, 205);
-		txtpnLog.setWrapStyleWord(true);
-		txtpnLog.setColumns(20);
-		bgpanel.add(txtpnLog);
 		
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -81,15 +75,27 @@ public class VIRPTEQ_Updater_GUI {
 				VIRPTEQ_Updater.initUpdate();
 			}
 		});
-		btnUpdate.setBounds(270, 187, 89, 23);
+		btnUpdate.setBounds(525, 161, 89, 23);
 		btnUpdate.setEnabled(true);
 		bgpanel.add(btnUpdate);
 		
 		txtpnInstructions.setEditable(false);
 		txtpnInstructions.setFont(new Font("Tahoma", Font.BOLD, 9));
-		txtpnInstructions.setText("This is the VIRPTEQ Calculator Updater!\r\nTo test for and apply updates, click the update button below.\r\nIt will download the latest version \r\nof VIRPTEQ Calculator from our Git repository on: \"github.com/GenElectrovise/\r\nVIRPTEQ-Calc\"");
-		txtpnInstructions.setBounds(230, 23, 174, 127);
+		txtpnInstructions.setText("This is the VIRPTEQ Calculator Updater!\r\nTo test for and apply updates, click the update button below.\r\nIt will download the latest version \r\nof VIRPTEQ Calculator from our Git repository on: \"github.com/GenElectrovise/VIRPTEQ-Calc\"");
+		txtpnInstructions.setBounds(10, 161, 604, 67);
 		bgpanel.add(txtpnInstructions);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 21, 604, 129);
+		bgpanel.add(scrollPane);
+		scrollPane.setViewportView(txtpnLog);
+		txtpnLog.setWrapStyleWord(true);
+		
+		txtpnLog.setToolTipText("Log of actions");
+		txtpnLog.setFont(new Font("Tahoma", Font.BOLD, 7));
+		txtpnLog.setEditable(false);
+		txtpnLog.setWrapStyleWord(true);
+		txtpnLog.setColumns(20);
 
 	}
 	
@@ -100,5 +106,10 @@ public class VIRPTEQ_Updater_GUI {
 	protected static void appendLog(String toAppend, boolean newLine) {
 		if(newLine) txtpnLog.setText(txtpnLog.getText() + "\n" + toAppend);
 		else txtpnLog.setText(txtpnLog.getText() + toAppend);
+		System.out.println(toAppend);
+	}
+	
+	private static void testForSaveLocation() {
+		
 	}
 }
