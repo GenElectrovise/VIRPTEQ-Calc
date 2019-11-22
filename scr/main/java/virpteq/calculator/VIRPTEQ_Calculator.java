@@ -1,4 +1,4 @@
-package virpteq;
+package virpteq.calculator;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
-import virpteq.VIRPTEQ_Equations;
+import virpteq.calculator.VIRPTEQ_Equations;
 
 import javax.swing.JLabel;
 

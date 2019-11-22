@@ -1,4 +1,4 @@
-package virpteq;
+package virpteq.calculator;
 
 public class VIRPTEQ_Equations {
 	protected void calcCur() {
