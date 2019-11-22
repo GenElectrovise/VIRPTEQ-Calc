@@ -94,7 +94,7 @@ public class VIRPTEQ_Calculator {
 		JPanel bgPanel = new JPanel();
 		bgPanel.setBorder(new TitledBorder(
 				new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)),
-				"VIRPEQT Calculator by GenElectrovise", TitledBorder.CENTER, TitledBorder.TOP, null,
+				"VIRPTEQ Calculator by GenElectrovise", TitledBorder.CENTER, TitledBorder.TOP, null,
 				new Color(0, 0, 0)));
 		bgPanel.setBounds(10, 11, 591, 269);
 		frame.getContentPane().add(bgPanel);
@@ -163,6 +163,7 @@ public class VIRPTEQ_Calculator {
 
 		buttonGroupV.add(rdbtnViR);
 		rdbtnViR.setBounds(239, 44, 109, 23);
+		rdbtnViR.setSelected(true);
 		bgPanel.add(rdbtnViR);
 
 		buttonGroupV.add(rdbtnVpI);
@@ -171,6 +172,7 @@ public class VIRPTEQ_Calculator {
 
 		buttonGroupI.add(rdbtnIvR);
 		rdbtnIvR.setBounds(239, 75, 109, 23);
+		rdbtnIvR.setSelected(true);
 		bgPanel.add(rdbtnIvR);
 
 		buttonGroupI.add(rdbtnIpV);
@@ -239,6 +241,7 @@ public class VIRPTEQ_Calculator {
 
 		buttonGroupP.add(rdbtnPiV);
 		rdbtnPiV.setBounds(239, 137, 109, 23);
+		rdbtnPiV.setSelected(true);
 		bgPanel.add(rdbtnPiV);
 
 		buttonGroupP.add(rdbtnPiR);
@@ -252,6 +255,7 @@ public class VIRPTEQ_Calculator {
 
 		buttonGroupE.add(rdbtnEP);
 		rdbtnEP.setBounds(239, 230, 109, 23);
+		rdbtnEP.setSelected(true);
 		bgPanel.add(rdbtnEP);
 
 		buttonGroupE.add(rdbtnEQ);
@@ -260,6 +264,7 @@ public class VIRPTEQ_Calculator {
 
 		buttonGroupT.add(rdbtnTeP);
 		rdbtnTeP.setBounds(239, 199, 109, 23);
+		rdbtnTeP.setSelected(true);
 		bgPanel.add(rdbtnTeP);
 
 		buttonGroupP.add(rdbtnPE);
@@ -268,10 +273,12 @@ public class VIRPTEQ_Calculator {
 
 		buttonGroupC.add(rdbtnQI);
 		rdbtnQI.setBounds(239, 168, 109, 23);
+		rdbtnQI.setSelected(true);
 		bgPanel.add(rdbtnQI);
 
 		buttonGroupR.add(rdbtnRV);
 		rdbtnRV.setBounds(239, 106, 109, 23);
+		rdbtnRV.setSelected(true);
 		bgPanel.add(rdbtnRV);
 		buttonGroupV.add(rdbtnVE);
 		rdbtnVE.setBounds(461, 44, 109, 23);
