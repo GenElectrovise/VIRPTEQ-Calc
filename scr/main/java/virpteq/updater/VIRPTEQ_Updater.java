@@ -75,7 +75,6 @@ public class VIRPTEQ_Updater {
 			VIRPTEQ_Updater_GUI.appendLog(">>>>> BEGIN FETCHING VERSION <<<<<");
 
 			String fileName = "latestversion.txt";
-			byte[] version;
 
 			VIRPTEQ_Updater_GUI.appendLog("Will search for file: " + fileName);
 			String link = "https://raw.githubusercontent.com/GenElectrovise/VIRPTEQ-Calc/master/" + fileName; // https://github.com/GenElectrovise/VIRPTEQ-Calc/releases/download/1.2/VIRPTEQ_Calculator_1.2.jar
